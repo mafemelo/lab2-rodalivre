@@ -1,0 +1,19 @@
+# Java / Maven
+target/
+*.class
+*.log
+
+# Node / React
+node_modules/
+dist/
+.vite/
+
+# Segredos
+.env
+.env.*
+application-local.properties
+
+# IDEs
+.idea/
+*.iml
+.vscode/
