@@ -39,4 +39,9 @@ export const api = {
   pedidos: () => req('/pedidos'),
   criarPedido: (automovelId) => req('/pedidos', { method: 'POST', body: JSON.stringify({ automovelId }) }),
   cancelarPedido: (id) => req(`/pedidos/${id}/cancelar`, { method: 'PUT' }),
+  pedidosAgente: () => req('/agente/pedidos'),
+  avaliar: (id, acao) => req(`/agente/pedidos/${id}/${acao}`, { method: 'PUT' }),
+  novoCarro: (dados) => req('/agente/automoveis', { method: 'POST', body: JSON.stringify(dados) }),
+  removerCarro: (id) => req(`/agente/automoveis/${id}`, { method: 'DELETE' }),
+  me: () => req('/auth/me'),
 }

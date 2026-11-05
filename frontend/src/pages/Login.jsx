@@ -14,8 +14,8 @@ export default function Login() {
     e.preventDefault()
     setErro(''); setEnviando(true)
     try {
-      await entrar(login, senha)
-      navigate('/carros')
+      const papel = await entrar(login, senha)
+      navigate(papel === 'ROLE_AGENTE' ? '/agente' : '/carros')
     } catch (err) {
       setErro(err.message)
     } finally {
@@ -25,7 +25,7 @@ export default function Login() {
 
   return (
     <div className="card auth-card">
-      <h2>Bem-vindo de volta 👋</h2>
+      <h2>Bem-vindo de volta </h2>
       <p className="sub">Entre para alugar seu próximo carro.</p>
       <label>Usuário</label>
       <input value={login} onChange={(e) => setLogin(e.target.value)} autoFocus />
