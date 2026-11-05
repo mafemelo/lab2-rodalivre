@@ -83,8 +83,3 @@ Implementado:
 - Cadastro e login
 - CRUD de cliente com até 3 rendimentos
 - Pedido de aluguel com status (criar, listar, cancelar)
-
-Previsto nos modelos, ainda não implementado:
-- Perfil de agente avaliando pedidos
-- Contrato de aluguel e contrato de crédito
-- Propriedade do automóvel (cliente, empresa ou banco)
